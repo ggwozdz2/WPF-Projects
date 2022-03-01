@@ -22,7 +22,7 @@
 (**********  Zadanie Modyfikacja drzew ***********)
 (*************************************************)
 (********* Autor pracy: Grzegorz Gwóźdź **********)
-(****** Code Reviewer: Wojciech Weremczuk ********)
+(****** Code Reviewer:  ********)
 
 type t =
   | Empty
