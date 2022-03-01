@@ -2,7 +2,7 @@
 (*************** Zadanie Origami *****************)
 (*************************************************)
 (********* Autor pracy: Grzegorz Gwóźdź **********)
-(******** Code Reviewerka: Emilia Dębicka ********)
+(******** Code Reviewerka:  ********)
 
 open List;;
 (*punkt na płaszczyźnie*)
