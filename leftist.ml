@@ -2,7 +2,7 @@
 (**********  Zadanie Drzewa Lewicowe. ***********)
 (************************************************)
 (********* Autor pracy: Grzegorz Gwóźdź *********)
-(********* Code Reviewer: Jakub Kłos  **********)
+(********* Code Reviewer:   **********)
 
 type 'a queue = Puste | Wezel of 'a queue * 'a * 'a queue * int;;
 (*Kolejka jako typ wariantowy - Pusta lub Wezel zlozony z lewego poddrzewa, wierzchołka, prawego poddrzewa i wysokości*)
@@ -62,23 +62,3 @@ let delete_min q =
 
  (*******************************************)
  (*******************************************)
- (*TESTY
- let a1 = empty;; 
- assert (is_empty a1 = true);;
- let a1 = add 1 a1;;
- assert (is_empty a1 = false);;
-let a1 = add 2 a1;;
-let a1 = add 3 a1;; (*drzewo 1, 2, 3*)
-let (min1, b1)=delete_min a1;;
-assert(min1 = 1);;
-let (min2, b2)=delete_min b1;;
-assert(min2 = 2 );;
-let c1 = empty;;
-let c1 = add 2 c1;;
-let c1 = add 4 c1;;
-let c1 = add (-1) c1;;
-let c1 = join c1 a1;; (*drzewo -1 1. 2, 2, 3, 4*)
-let (min3, c1)=delete_min c1;;
-assert(min3 = -1);;
-let (min3, c1)=delete_min c1;;
-assert(min3 = 1);;*)
