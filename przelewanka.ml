@@ -2,7 +2,7 @@
 (************  Zadanie Przelewanka. *************)
 (************************************************)
 (********* Autor pracy: Grzegorz Gwóźdź *********)
-(******* Code Reviewer: Maria Drązkiewicz *******)
+(******* Code Reviewer:  *******)
 open Queue;;
 open Array;;
 open List;;
