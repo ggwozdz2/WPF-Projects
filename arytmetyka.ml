@@ -2,7 +2,7 @@
 (* Zadanie o arytmetyce niedokładnych wartości. *)
 (************************************************)
 (********* Autor pracy: Grzegorz Gwóźdź *********)
-(********* Code Reviewer: Filip Nogaj  **********)
+(********* Code Reviewer:   **********)
 
 
 (* zdefiniowanie czym jest wartosc*)
@@ -176,61 +176,3 @@ let podzielic a b =
         let bpom = if b = (neg_infinity, infinity) then (neg_infinity, infinity)
         else (1. /. (snd b), 1. /. (fst b)) in
         razy a bpom
-
- (* TESTY: 
-
-
-let a = (2.0, 4.0);;
-let b = (1.0, 0.0);;
-let c = podzielic a b;; (*-inf, 4*) 
-
-let a = wartosc_od_do 2.0 3.0;;
-let b = wartosc_od_do (-2.0) 7.0;;
-let c = wartosc_od_do (-1.0) 1.0;;
-let d = wartosc_od_do 2.0 2.0;;
-let e = wartosc_od_do 9.0 17.0;;
-let f = wartosc_od_do (-5.0) (-1.0);;
-let g = wartosc_od_do 0.0 0.0;;
-let h = wartosc_od_do (-100.0) 200.0;;
-let i = wartosc_od_do 42. 69.
-
-let w1 = razy b c;;
-assert (in_wartosc w1 8.0 = false);;
-let w2 = razy c d;;
-let w3 = podzielic w1 w2;;
-assert (max_wartosc w3= infinity);;
-let w4 = plus g i;;
-let w5 = minus g f;;
-assert (in_wartosc w5 5.0 = true);;
-let w6 = razy w1 w3;;
-let w7 = plus c d;;
-assert (sr_wartosc w7 = 2.0);;
-let w8 = minus w5 d;;
-assert (min_wartosc w8 = (-1.0));;
-let w9 = podzielic w8 w6;;
-let w10 = podzielic w6 w8;;
-let w11 = razy w10 w1;;
-let w12 = plus w11 w7;;
-let w13 = razy e c;;
-assert (in_wartosc w13 (-17.1) = false);;
-let w14 = razy w13 w7;;
-let w15 = podzielic w14 e;;
-let w16 = podzielic d w15;;
-assert (in_wartosc w16 0.34 = false);;
-assert (in_wartosc w16 0.36 = true);;
-assert (in_wartosc w16 (-0.34) = false);;
-assert (in_wartosc w16 (-0.36) = true);;
-let w17 = podzielic a w15;;
-let w18 = razy w16 w17;;
-let w19 = podzielic w17 w16;;
-let w20 = podzielic w16 w17;;
-let w21 = podzielic w5 w6;;
-let w22 = razy w3 w4;;
-let w23 = podzielic w17 a;;
-assert (in_wartosc w23 (0.10) = false);;
-assert (in_wartosc w23 (0.13) = true);;
-let w24 = razy w23 b;;
-let w25 = minus w18 w19;;
-let w26 = plus w24 w25;;
-assert (max_wartosc w26 = infinity);;
-*) 
